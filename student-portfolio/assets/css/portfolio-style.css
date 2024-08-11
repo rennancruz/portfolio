@@ -4,15 +4,6 @@
   padding: 0;
 }
 
-header {
-  /* display: flex; */
-  justify-content: space-between;
-  /* flex-wrap: wrap; */
-  padding: 40px;
-  background-color: rgba(51, 51, 51, 0.753);
-  color: #fff;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -43,6 +34,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 40px;
 }
 
 .header h1 {
@@ -51,6 +43,18 @@ footer {
   border-left: 30px solid #505050;
   background-color: #6b6b6b;
   color: #fff;
+  font-size: x-large;
+}
+
+.profile-picture {
+  position: absolute;
+  left: 246px;
+  top: 19px;
+}
+
+.profile-picture img {
+  height: 87px;
+  clip-path: circle();
 }
 
 .header nav {
@@ -83,7 +87,6 @@ footer {
 
 .software-image img {
   height: 530px;
-  /* margin-left: 100px; */
   display: block;
   min-width: 250px;
   flex: 1 1 100%;
@@ -109,26 +112,32 @@ footer {
 }
 
 .portfolio-section h2 {
+  display: flex;
   color: #3d3939;
   margin: 10px 20px;
   padding: 100px 60px;
   border-right: 4px solid #3d3939;
+  align-items: center;
 }
 
 .about-me-content {
-  margin: auto auto;
-  padding-left: 15px;
+  align-self: center;
   color: #3d3939;
   width: 100%;
+  text-align: center;
+  margin: 124px 400px;
+  line-height: 1.5rem;
 }
 
-.pl-1 {
-  justify-items: flex-end;
+.about-me-content a {
+  color: purple;
 }
 
 .work-content {
-  display: block;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 124px 400px;
+  line-height: 1.5rem;
 }
 
 .inline {
@@ -184,6 +193,7 @@ footer {
 
 .contact-me nav ul li {
   display: inline-block;
+  justify-self: center;
   margin-left: 20px;
 }
 
