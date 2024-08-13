@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+:root {
+  --underline: solid underline #6b6b6b 4px;
+  --h2-size: x-large;
+  --p-size: large;
+  --background-color: #222222e1;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -18,19 +25,17 @@ button {
 footer {
   padding: 20px;
   text-align: center;
-  background-color: rgba(51, 51, 51, 0.753);
+  background-color: var(--background-color);
   color: #fff;
-}
-
-@media screen and (max-width: 1650px) {
-  .software-image img {
-    height: 500px;
-  }
 }
 
 .header {
   width: 100%;
-  background-color: #242424;
+  background-color: var(--background-color);
+  background-image: url(../images/software-engineer-gif.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 485px 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -76,28 +81,8 @@ footer {
   color: #fff;
 }
 
-.software-image {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  /* height: 400px; */
-  margin: 0;
-  background-color: #fff;
-}
-
-.software-image img {
-  height: 530px;
-  display: block;
-  min-width: 250px;
-  flex: 1 1 100%;
-}
-
 .underline {
-  border-bottom: 4px solid #6b6b6b;
-}
-
-.underline-2 {
-  border-bottom: 4px solid #3d3939;
+  text-decoration: var(--underline);
 }
 
 .portfolio-section {
@@ -105,6 +90,24 @@ footer {
   padding: 50px;
   display: flex;
   margin-bottom: 0;
+}
+
+.about-me-content {
+  align-self: center;
+  color: #3d3939;
+  width: 100%;
+  text-align: center;
+  margin: 124px 200px;
+  padding-right: 140px;
+  line-height: 1.5rem;
+}
+
+.about-me-content a {
+  color: purple;
+}
+
+.about-me-content {
+  font-size: var(--p-size);
 }
 
 .portfolio-section a {
@@ -118,22 +121,14 @@ footer {
   padding: 100px 60px;
   border-right: 4px solid #3d3939;
   align-items: center;
+  font-size: var(--h2-size);
 }
 
-.about-me-content {
-  align-self: center;
-  color: #3d3939;
-  width: 100%;
-  text-align: center;
-  margin: 124px 400px;
-  line-height: 1.5rem;
+#work {
+  padding-right: 100px;
 }
 
-.about-me-content a {
-  color: purple;
-}
-
-.work-content {
+.content {
   width: 100%;
   text-align: center;
   margin: 124px 400px;
@@ -169,51 +164,47 @@ footer {
   height: auto;
 }
 
-.contact-me {
+.contact-me div {
+  align-content: center;
+}
+
+.contact-list ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: auto auto;
-  max-width: 100%;
+  justify-content: space-evenly;
+  padding-right: 260px;
 }
 
-.contact-me a {
-  color: #3d3939;
+.linkedin::after {
+  background: url(../images/linkedin-logo.png) no-repeat;
 }
 
-.contact-me nav {
-  margin: auto auto;
-  justify-content: space-between;
-  justify-self: center;
+.github::after {
+  background: url(../images/github-logo.png) no-repeat;
 }
 
-.contact-me nav ul {
-  list-style-type: none;
+.email-logo::after {
+  background: url(../images/email-logo.png) no-repeat;
 }
 
-.contact-me nav ul li {
-  display: inline-block;
-  justify-self: center;
-  margin-left: 20px;
+.contact-logo::after {
+  display: flex;
+  position: relative;
+  background-size: 30px;
+  content: "";
+  width: 100%;
+  bottom: 31px;
+  height: 34px;
+  left: 63px;
 }
 
-.contact-me nav ul li a {
-  text-decoration: none;
-  color: #3d3939;
+#email::after {
+  bottom: 23px;
+  left: 156px;
 }
 
-.aside {
-  background-color: #6b6b6b;
-  color: #fff;
-  text-align: center;
-  padding: 23px;
-  flex: 1;
-  line-height: 2.5rem;
-  align-self: center;
-}
-
-.aside h3 {
-  font-size: large;
+#github::after {
+  left: 52px;
 }
 
 .contact-header {
