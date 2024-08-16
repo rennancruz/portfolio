@@ -62,6 +62,10 @@ footer {
   clip-path: circle();
 }
 
+.software-gif {
+  display: none;
+}
+
 .header nav {
   padding-top: 15px;
   margin-right: 20px;
@@ -124,14 +128,9 @@ footer {
   font-size: var(--h2-size);
 }
 
-#work {
-  padding-right: 100px;
-}
-
 .content {
   width: 100%;
   text-align: center;
-  margin: 124px 400px;
   line-height: 1.5rem;
 }
 
@@ -141,10 +140,6 @@ footer {
   align-items: center;
 }
 
-.item {
-  position: relative;
-}
-
 .image-wrapper {
   position: relative;
 }
@@ -152,16 +147,6 @@ footer {
 .overlay-text {
   position: absolute;
   bottom: 10px;
-}
-
-.overlay-text-2 {
-  position: absolute;
-  top: 10px;
-}
-
-.left-image,
-.right-image {
-  height: auto;
 }
 
 .contact-me div {
@@ -214,4 +199,68 @@ footer {
   margin: 10px 20px;
   padding: 100px 60px;
   border-right: 4px solid #3d3939;
+}
+
+@media screen and (max-width: 1320px) {
+  .header,
+  .portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .header {
+    background-image: none;
+  }
+
+  .header h1 {
+    align-self: center;
+  }
+
+  .header nav {
+    align-self: center;
+  }
+
+  .profile-picture {
+    display: none;
+  }
+
+  .gif {
+    display: flex;
+  }
+
+  .software-gif {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .about-me-content {
+    margin: 0px;
+    padding-right: 0;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5rem;
+  }
+
+  .item {
+    flex-wrap: wrap;
+  }
+
+  .portfolio-section h2 {
+    padding: 43px 60px;
+    border-right: none;
+    border-bottom: 4px solid #3d3939;
+    justify-content: center;
+  }
+
+  .contact-list ul {
+    padding: 0;
+  }
 }
